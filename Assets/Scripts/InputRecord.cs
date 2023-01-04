@@ -58,7 +58,6 @@ public class InputRecord : MonoBehaviour
     {
         // PlayFabにおいては小数を利用出来ない為、
         // 取得した時間に変数FloatToIntを掛けて(int)を付加する事で整数とし、
-        // 更に-1を掛ける事で昇順のランキングとする。
         // Unity上に表示する際には再び小数の形に戻す。
         int score = (int)(bestTime * FloatToInt);
         PlayFabClientAPI.UpdatePlayerStatistics(new UpdatePlayerStatisticsRequest
