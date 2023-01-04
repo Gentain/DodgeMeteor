@@ -17,6 +17,7 @@ public class PlayerBehavior : MonoBehaviour
         
     }
 
+    // 隕石("Meteor"タグの付いたオブジェクト)に触れた際に、ロケットを赤色に変える。
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Meteor")

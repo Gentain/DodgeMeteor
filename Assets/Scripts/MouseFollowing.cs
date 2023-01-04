@@ -17,7 +17,7 @@ public class MouseFollowing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameOver.gameOver == false)
+        if (GameOver.gameOver == false) // プレイヤーがゲームオーバーでない場合
         {
             mousePos = Input.mousePosition; // マウスの位置を取得
             mousePos.z = 10; // マウスカーソルのz座標はカメラまでの距離を入力。

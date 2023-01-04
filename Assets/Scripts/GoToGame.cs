@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GoToGame : MonoBehaviour
 {
+    // ÉQÅ[ÉÄÇ÷Ç∆êiÇﬁÅB
     public void OnClickButton()
     {
         SceneManager.LoadScene("GameScene");

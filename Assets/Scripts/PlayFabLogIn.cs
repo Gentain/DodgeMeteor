@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayFabLogIn : MonoBehaviour
 {
-    string defaultName = "Guest";
-    static public string inputName;
-    public InputField inputField;
+    string defaultName = "Guest"; // デフォルトのログイン名
+    static public string inputName; // 入力した名前
+    public InputField inputField; // 名前の入力欄
 
     // Start is called before the first frame update
     void Start()
@@ -21,14 +21,15 @@ public class PlayFabLogIn : MonoBehaviour
     {
     }
 
-    public void InputName()
+    public void InputName() // 名前を入力欄に入れる
     {
-        inputName = inputField.text;
+        inputName = inputField.text; // 入力欄のテキストに入れた名前を代入する。
         Debug.Log(inputName);
     }
 
     public void submitPlayerDisplayName()
     {
+        // 入力欄の名前が空白かデフォルト(Guest)のままの場合、Guestという名前でログインする。
         if (inputField.text == "" || inputField.text == defaultName)
         {
             inputName = defaultName;
@@ -36,7 +37,7 @@ public class PlayFabLogIn : MonoBehaviour
         RankingLogIn();
     }
 
-    // Start is called before the first frame update
+    // PlayFabによるランキングへのエントリー(ログイン)
    public void RankingLogIn()
     {
         PlayFabClientAPI.LoginWithCustomID(new LoginWithCustomIDRequest { CustomId = inputName, CreateAccount = true },

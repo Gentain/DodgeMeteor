@@ -15,7 +15,7 @@ public class Timer : MonoBehaviour
         time = 0;
     }
 
-    // Update is called once per frame
+    // プレイ中は常に時間計測をし、ゲームオーバーになった際はベストタイムを取得する。
     void Update()
     {
         if (GameOver.gameOver == false)
